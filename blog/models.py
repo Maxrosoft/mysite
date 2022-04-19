@@ -19,9 +19,6 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
-    about_author = models.CharField(max_length=250)
-    rating_of_post = models.IntegerField()
-    rating_of_author = models.IntegerField()
 
     class Meta:
         ordering = ('-publish',)
