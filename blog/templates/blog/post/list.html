@@ -4,7 +4,10 @@
     <h1>The War - Odessa</h1>
     {% for post in posts %}
         <h2>
-            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            <a href="{{ post.get_absolute_url }}" style="text-decoration: none; color: black; font-weight: bold;"
+               onmouseover="this.style.color='gray';" onmouseout="this.style.color='black';">
+                {{ post.title }}
+            </a>
         </h2>
         <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
         {{ post.body|truncatewords:30|linebreaks }}

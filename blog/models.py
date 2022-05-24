@@ -25,8 +25,8 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
-    objects = models.Manager()  # Менеджер по умолчанию.
-    published = PublishedManager()  # Наш новый менеджер
+    objects = models.Manager()
+    published = PublishedManager()
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.publish.year,
