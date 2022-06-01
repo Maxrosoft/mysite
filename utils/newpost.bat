@@ -1,0 +1,2 @@
+echo from django.contrib.auth.models import User; from blog.models import Post; user = User.objects.get(username='admin'); post = Post(title='Another post', slug='another-post', body='Post body.', author=user); post.save() | python C:\tmp\mysite\manage.py shell
+pause
